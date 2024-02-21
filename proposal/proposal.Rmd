@@ -86,9 +86,11 @@ Patient demographics (age, gender, ethnicity), diet (specific dietary patterns o
 
 ### Rationale
 
-The emphasis on these factors is due to the multifactorial nature of Parkinson's disease, which involves complex interactions between genetic predisposition and environmental exposures. In previous clinical research, it has been established that specific dietary components such as antioxidants found in fruits and vegetables can reduce oxidative stress, which is crucial in the neurodegenerative process observed in Parkinson's disease. While these results provide valuable information on potential protective dietary elements, a key question remains in our understanding of how broader lifestyle patterns, including exercise, tobacco use, and alcohol consumption, interact with dietary habits and demographic backgrounds to influence the risk of Parkinson's disease.
+The emphasis on these factors is due to the multifactorial nature of Parkinson's disease, which involves complex interactions between genetic predisposition and environmental exposures. In previous clinical research, it has been established that specific dietary components such as antioxidants found in fruits and vegetables can reduce oxidative stress, which is crucial in the neurodegenerative process observed in Parkinson's disease. While these results provide valuable information on protective dietary elements, a key question that remains in our understanding is how broader lifestyle patterns, including exercise, tobacco use, and alcohol consumption, interact with dietary habits and demographic backgrounds to influence the risk of Parkinson's disease.
 
 ### Experimental Approach
+
+To explore potential significant features, we will conduct data processing, data visualization, and statistical analysis based on the following steps:
 
 - Data Preparation: Missing data will be handled based on the nature and extent of the missingness. Dietary intake and exercise data will be converted into standardized units such as servings per day, and hours per week to enable consistent comparisons. Additionally, we may also normalize variables with skewed distributions to satisfy the assumptions of certain statistical tests.
 
@@ -153,6 +155,8 @@ Parkinson’s Disease: Causes, Symptoms, and Treatments. National Institute on A
 What is UK Biobank?. UK Biobank. Accessed Feb 21, 2024. https://www.ukbiobank.ac.uk/
 
 View the Data Showcase. UK Biobank. Accessed Feb 21, 2024. https://biobank.ctsu.ox.ac.uk/crystal/
+
+Park HA, Ellis AC. Dietary Antioxidants and Parkinson's Disease. Antioxidants (Basel). 2020;9(7):570. Published 2020 Jul 1. doi:10.3390/antiox9070570
 
 Chairta PP, Hadjisavvas A, Georgiou AN, et al. Prediction of Parkinson's Disease Risk Based on Genetic Profile and Established Risk Factors. Genes (Basel). 2021;12(8):1278. Published 2021 Aug 20. doi:10.3390/genes12081278
 
