@@ -144,6 +144,8 @@ Given the extreme class imbalance and the complex interactions among risk factor
 
 # Reference
 
+Parkinson's Disease: Challenges, Progress, and Promise. National Institute of Neurological Disorders and Stroke. Updated Jan 30, 2023. Accessed Feb 21, 2024. https://www.ninds.nih.gov/current-research/focus-disorders/parkinsons-disease-research/parkinsons-disease-challenges-progress-and-promise
+
 Parkinson’s Disease. Mayo Clinic. Updated May 26, 2023. Accessed Feb 21, 2024. https://www.mayoclinic.org/diseases-conditions/parkinsons-disease/symptoms-causes/syc-20376055
 
 Parkinson’s Disease: Causes, Symptoms, and Treatments. National Institute on Aging. Updated April 14, 2022. Accessed Feb 21, 2024. https://www.nia.nih.gov/health/parkinsons-disease/parkinsons-disease-causes-symptoms-and-treatments
