@@ -110,7 +110,7 @@ Given the results from the statistical models, we will interpret the results in 
 
 Unaddressed confounding variables, which influence both the exposure (diet, lifestyle habits) and the outcome (Parkinson's disease), may bias the results. Socioeconomic status, for example, may impact participants' access to healthcare resources and safe environments for exercise, which could affect the occurrence of the disease. A potential solution involves adjusting for other known confounders in the multivariate model.
 
-## Specific Aim 2: Establishing practical and interpretable models for predicting the risk of Parkinson's disease.
+## Specific Aim 2: Building practical and interpretable models for predicting the risk of Parkinson's disease for each specific patient.
 
 ### Hypothesis
 
@@ -118,7 +118,7 @@ Parkinson's disease is widely believed to be associated with a combination of va
 
 ### Rationale
 
-While no definitive cause has been identified in previous studies, various features have been linked to the risk of Parkinson's disease, including genetics, environmental risk factors, lifestyle, and family history of related syndromes. Given the potential interaction among these factors, early diagnosis of Parkinson's disease could be complex and challenging, which denotes that more comprehensive methods are required to help model complex scenarios, capture relationships, and achieve more accurate risk predictions.
+While no definitive cause has been identified in previous studies, various features have been linked to the risk of Parkinson's disease, including genetics, environmental risk factors, lifestyle, and family history of related syndromes. On the one hand, building a predictive model for each specific patient to estimates the risk of Parkinson's disease may contribute a lot to further treatment and control of the disease; On the other hand, more comprehensive methods compared to traditional statistical methods are required to help model complex scenarios and capture relationships.
 
 ### Experimental Approach
 
@@ -126,7 +126,7 @@ To construct a practical risk prediction model, we will conduct data processing,
 
 - Data Preparation: Involving data cleaning, checking for missing data, and basic preprocessing to ensure data quality. Considering the large number of features in the dataset, we will utilize data compression and other efficient feature filtering methods to reduce model complexity.
 
-- Feature Engineering: Exploring the relationship between features and the response variable with exploratory data analysis and basic visualization tools, and conducting appropriate feature engineering  such as binning, encoding and spline tricks if needed. Additionally, considering the data imbalance, we will focus on sampling techniques and related evaluation in data processing to assist the model learning process.
+- Feature Engineering and Matching: Exploring the relationship between features and the response variable with basic visualization tools, and conducting appropriate feature engineering  such as binning, encoding and spline tricks if needed. Additionally, considering the data imbalance, we will focus on possible matching methods to figure out samples of high value (which are around classification boundaries).
 
 - Model Training and Improvement: Utilizing various ensemble learning methods (boosting or bagging) to construct predictive models for estimating the risk of Parkinson's disease. We will further improve model performance with appropriate parameter tuning and regularization strategies, considering the potential problem of overfitting with imbalanced data and sampling preprocessing.
 
@@ -140,7 +140,7 @@ The predictive model will focus on a balance between accuracy and interpretabili
 
 ### Potential Problems and Alternative Approaches
 
-Given the extreme class imbalance and the complex interactions among risk factors of Parkinson’s disease, oversampling techniques like SMOTE may introduce ambiguity to classification boundaries and exacerbate potential confusion and overfitting. To address the possible challenges, we plan to use cost-sensitive learning algorithms and other methodologies as alternative approaches to mitigate these issues.
+Given the extreme class imbalance and the complex interactions between among risk factors of Parkinson’s disease, oversampling techniques may introduce ambiguity to classification boundaries and exacerbate potential confusion and overfitting, while training only with samples after matching may also introduce overfitting, as the distribution of training data is different from the practical scenario. To address the possible challenges, we plan to employ matching methods with appropriate cost-sensitive learning algorithms as alternative approaches to mitigate these issues.
 
 <br>
 
