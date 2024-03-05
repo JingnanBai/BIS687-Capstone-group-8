@@ -114,11 +114,11 @@ Unaddressed confounding variables, which influence both the exposure (diet, life
 
 ### Hypothesis
 
-Parkinson's disease is widely believed to be associated with a combination of various risk factors, making the prediction of the disease's risk feasible. Based on previous detection and analysis, we will utilize interpretable predictive models to further validate identified Parkinson's-related features, while exploring more about indicators that may not be causative but could assist in early Parkinson's diagnosis.
+Parkinson's disease is widely believed to be associated with a combination of various risk factors, making the prediction of the disease's risk feasible. Based on previous detection and analysis, we will build predictive models for each specific patient to estimate the risk of Parkinson's disease, while exploring more indicators that may not be causative but could assist in early Parkinson's diagnosis.
 
 ### Rationale
 
-While no definitive cause has been identified in previous studies, various features have been linked to the risk of Parkinson's disease, including genetics, environmental risk factors, lifestyle, and family history of related syndromes. On the one hand, building a predictive model for each specific patient to estimates the risk of Parkinson's disease may contribute a lot to further treatment and control of the disease; On the other hand, more comprehensive methods compared to traditional statistical methods are required to help model complex scenarios and capture relationships.
+While no definitive cause has been identified in previous studies, various features have been linked to the risk of Parkinson's disease, including genetics, environmental risk factors, lifestyle, and family history of related syndromes. On the one hand, building a predictive model for each specific patient to estimates the risk of Parkinson's disease may contribute a lot to further treatment and control of the disease; On the other hand, a comprehensive method may give insights about related risk factors that is different from the previous statistical methods.
 
 ### Experimental Approach
 
@@ -126,9 +126,9 @@ To construct a practical risk prediction model, we will conduct data processing,
 
 - Data Preparation: Involving data cleaning, checking for missing data, and basic preprocessing to ensure data quality. Considering the large number of features in the dataset, we will utilize data compression and other efficient feature filtering methods to reduce model complexity.
 
-- Feature Engineering and Matching: Exploring the relationship between features and the response variable with basic visualization tools, and conducting appropriate feature engineering  such as binning, encoding and spline tricks if needed. Additionally, considering the data imbalance, we will focus on possible matching methods to figure out samples of high value (which are around classification boundaries).
+- Feature Engineering and Matching: Exploring the relationship between features and the response variable with basic visualization tools, and conducting appropriate feature engineering such as binning and encoding (as there are too many features in dataset). Additionally, considering the data imbalance and the target of classification, we will focus on matching methods to figure out samples of high value (which are close to the classification boundaries).
 
-- Model Training and Improvement: Utilizing various ensemble learning methods (boosting or bagging) to construct predictive models for estimating the risk of Parkinson's disease. We will further improve model performance with appropriate parameter tuning and regularization strategies, considering the potential problem of overfitting with imbalanced data and sampling preprocessing.
+- Model Training and Improvement: Utilizing various ensemble learning methods (boosting or bagging) to construct predictive models for estimating the risk of Parkinson's disease. We will further improve model performance with appropriate parameter tuning and regularization strategies.
 
 - Model Evaluation: With cross-validation techniques, further assessing the predictive performance of the models based on basic metrics for classification tasks, along with AUC for evaluating the model's ranking abilities. Furthermore, given the data characteristics, more attention will be attached to examining the robustness of the models when facing the imbalanced data in practical use.
 
