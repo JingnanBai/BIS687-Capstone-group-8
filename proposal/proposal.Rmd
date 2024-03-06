@@ -100,7 +100,7 @@ To explore potential significant features, we will conduct data processing, data
 
 - Statistical Model: Recognizing the challenge of multicollinearity, where closely related factors may interface with the ability to discern their individual effects, we will first select potential factors in each category. We may consider using models that include penalties such as LASSO or ridge regression. Subsequent to feature selection, we will conduct statistical tests to assess the significance of these factors. As longitudinal measurements for each feature are available, we will implement mixed-effect models to capture the within-participant variability over time and provide an understanding of how individual trajectories influence the outcome.
 
-- Sensitivity Analysis: We will perform sensitivity analyses to validate model assumptions and ensure our findings regarding key factors are reliable.
+- Sensitivity Analysis: We will perform sensitivity analyses to validate model assumptions and ensure our findings regarding key factors are reliable. The simplest approach we consider is to change one factor at a time while keeping others at their baseline to observe the effect on the output. This method, however, may not capture the interactions between variables. We may consider approaches such as changing the model structure and other avanced analysis to detect global sensitivity.
 
 ### Interpretation of Results
 
