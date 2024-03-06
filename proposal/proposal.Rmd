@@ -126,7 +126,7 @@ To construct a practical risk prediction model, we will conduct data processing,
 
 - Data Preparation: Involving data cleaning, checking for missing data, and basic preprocessing to ensure data quality. Considering the large number of features in the dataset, we will utilize data compression and other efficient feature filtering methods to reduce model complexity.
 
-- Feature Engineering and Matching: Exploring the relationship between features and the response variable with basic visualization tools, and conducting appropriate feature engineering such as binning and encoding (as there are too many features in dataset). Additionally, considering the data imbalance and the target of classification, we will focus on matching methods to figure out samples of high value (which are close to the classification boundaries).
+- Feature Engineering and Matching Methods: Exploring the relationship between features and the response variable with basic visualization tools, and conducting appropriate feature engineering such as binning and encoding (as there are too many features in dataset). Additionally, we will focus on propensity score matching to figure out samples of high value (which are close to the classification boundaries) and mitigate the problem of data imbalance.
 
 - Model Training and Improvement: Utilizing various ensemble learning methods (boosting or bagging) to construct predictive models for estimating the risk of Parkinson's disease. We will further improve model performance with appropriate parameter tuning and regularization strategies.
 
