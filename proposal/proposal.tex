@@ -51,7 +51,7 @@
 
   \title{Group 8 Proposal}
     \author{Jingnan Bai, Kexin Wang, Yiming Miao, Qiyu Huang}
-      \date{2024-02-21}
+      \date{2024-03-06}
 
 
 %%%%%%%%%%
@@ -137,6 +137,10 @@ genetic, clinical, and lifestyle information on 500,000 UK participants.
 Notably, it includes precise records of PD diagnoses among participants,
 offering a unique lens to longitudinally examine the characteristics of
 PD patients and hence deepen our understanding of the disease's onset.
+In this study, we will categorize the response variable as binary
+outcomes (0 for non-PD, 1 for PD) at each participant's visit, enabling
+an in-depth exploration of potential risk factors through statistical
+modeling and machin learning techniques.
 
 This research project, informed by a thorough review of the dataset and
 existing medical literature, is driven by two specific aims:
@@ -342,10 +346,10 @@ could affect the occurrence of the disease. A potential solution
 involves adjusting for other known confounders in the multivariate
 model.
 
-\hypertarget{specific-aim-2-establishing-practical-and-interpretable-models-for-predicting-the-risk-of-parkinsons-disease.}{%
-\subsection{Specific Aim 2: Establishing practical and interpretable
-models for predicting the risk of Parkinson's
-disease.}\label{specific-aim-2-establishing-practical-and-interpretable-models-for-predicting-the-risk-of-parkinsons-disease.}}
+\hypertarget{specific-aim-2-building-practical-and-interpretable-models-for-predicting-the-risk-of-parkinsons-disease-for-each-specific-patient.}{%
+\subsection{Specific Aim 2: Building practical and interpretable models
+for predicting the risk of Parkinson's disease for each specific
+patient.}\label{specific-aim-2-building-practical-and-interpretable-models-for-predicting-the-risk-of-parkinsons-disease-for-each-specific-patient.}}
 
 \hypertarget{hypothesis-1}{%
 \subsubsection{Hypothesis}\label{hypothesis-1}}
@@ -353,10 +357,9 @@ disease.}\label{specific-aim-2-establishing-practical-and-interpretable-models-f
 Parkinson's disease is widely believed to be associated with a
 combination of various risk factors, making the prediction of the
 disease's risk feasible. Based on previous detection and analysis, we
-will utilize interpretable predictive models to further validate
-identified Parkinson's-related features, while exploring more about
-indicators that may not be causative but could assist in early
-Parkinson's diagnosis.
+will build predictive models for each specific patient to estimate the
+risk of Parkinson's disease, while exploring more indicators that may
+not be causative but could assist in early Parkinson's diagnosis.
 
 \hypertarget{rationale-1}{%
 \subsubsection{Rationale}\label{rationale-1}}
@@ -364,11 +367,12 @@ Parkinson's diagnosis.
 While no definitive cause has been identified in previous studies,
 various features have been linked to the risk of Parkinson's disease,
 including genetics, environmental risk factors, lifestyle, and family
-history of related syndromes. Given the potential interaction among
-these factors, early diagnosis of Parkinson's disease could be complex
-and challenging, which denotes that more comprehensive methods are
-required to help model complex scenarios, capture relationships, and
-achieve more accurate risk predictions.
+history of related syndromes. On the one hand, building a predictive
+model for each specific patient to estimates the risk of Parkinson's
+disease may contribute a lot to further treatment and control of the
+disease; On the other hand, a comprehensive method may give insights
+about related risk factors that is different from the previous
+statistical methods.
 
 \hypertarget{experimental-approach-1}{%
 \subsubsection{Experimental Approach}\label{experimental-approach-1}}
@@ -384,20 +388,19 @@ processing, model training, and evaluation based on the following steps:
   and other efficient feature filtering methods to reduce model
   complexity.
 \item
-  Feature Engineering: Exploring the relationship between features and
-  the response variable with exploratory data analysis and basic
-  visualization tools, and conducting appropriate feature engineering
-  such as binning, encoding and spline tricks if needed. Additionally,
-  considering the data imbalance, we will focus on sampling techniques
-  and related evaluation in data processing to assist the model learning
-  process.
+  Feature Engineering and Matching Methods: Exploring the relationship
+  between features and the response variable with basic visualization
+  tools, and conducting appropriate feature engineering such as binning
+  and encoding (as there are too many features in dataset).
+  Additionally, we will focus on propensity score matching to figure out
+  samples of high value (which are close to the classification
+  boundaries) and mitigate the problem of data imbalance.
 \item
   Model Training and Improvement: Utilizing various ensemble learning
   methods (boosting or bagging) to construct predictive models for
   estimating the risk of Parkinson's disease. We will further improve
   model performance with appropriate parameter tuning and regularization
-  strategies, considering the potential problem of overfitting with
-  imbalanced data and sampling preprocessing.
+  strategies.
 \item
   Model Evaluation: With cross-validation techniques, further assessing
   the predictive performance of the models based on basic metrics for
@@ -429,12 +432,15 @@ disease risk or could assist in early detection of Parkinson's disease.
 \subsubsection{Potential Problems and Alternative
 Approaches}\label{potential-problems-and-alternative-approaches-1}}
 
-Given the extreme class imbalance and the complex interactions among
-risk factors of Parkinson's disease, oversampling techniques like SMOTE
-may introduce ambiguity to classification boundaries and exacerbate
-potential confusion and overfitting. To address the possible challenges,
-we plan to use cost-sensitive learning algorithms and other
-methodologies as alternative approaches to mitigate these issues.
+Given the extreme class imbalance and the complex interactions between
+among risk factors of Parkinson's disease, oversampling techniques may
+introduce ambiguity to classification boundaries and exacerbate
+potential confusion and overfitting, while training only with samples
+after matching may also introduce overfitting, as the distribution of
+training data is different from the practical scenario. To address the
+possible challenges, we plan to employ matching methods with appropriate
+cost-sensitive learning algorithms as alternative approaches to mitigate
+these issues.
 
 \hypertarget{reference}{%
 \section{Reference}\label{reference}}

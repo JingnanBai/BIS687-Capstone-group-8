@@ -38,7 +38,7 @@ Parkinson’s disease (PD) ranks as the second-most common neurodegenerative dis
 
 Characterized as a progressive neurological disorder, PD occurs due to the gradual degeneration or death of nerve cells in the basal ganglia. The exact cause of neuronal death remains inconclusive, though current research suggests a combination of specific genetic variants and environmental factors, including toxin exposure, as leading risk contributors.
 
-The UK Biobank is a large biomedical database that contains detailed genetic, clinical, and lifestyle information on 500,000 UK participants. Notably, it includes precise records of PD diagnoses among participants, offering a unique lens to longitudinally examine the characteristics of PD patients and hence deepen our understanding of the disease's onset.
+The UK Biobank is a large biomedical database that contains detailed genetic, clinical, and lifestyle information on 500,000 UK participants. Notably, it includes precise records of PD diagnoses among participants, offering a unique lens to longitudinally examine the characteristics of PD patients and hence deepen our understanding of the disease's onset. In this study, we will categorize the response variable as binary outcomes (0 for non-PD, 1 for PD) at each participant's visit, enabling an in-depth exploration of potential risk factors through statistical modeling and machin learning techniques. 
 
 This research project, informed by a thorough review of the dataset and existing medical literature, is driven by two specific aims:
 
