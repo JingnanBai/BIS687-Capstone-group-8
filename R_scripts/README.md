@@ -6,17 +6,23 @@ Group 8
 
 <br/>
 
-- utils: function definition here for reuse. 
+- **function definition**: `utils.R`  ==> @JingnanBai
 
-- data preprocessing: `preprocessing.R` 
+<br/>
+
+- **data preprocessing**: `preprocessing.R` ==> @JingnanBai
   - conduct data cleaning
   - dealing with missing value
   - WOE + IV for feature filtering
   - propensity score matching (PSM)
-    
-- Aim 1:
 
-- Aim 2: build predictive model `aim2_predictive_mod.R`
+<br/>
+
+- **Aim 1**:
+
+<br/>
+
+- **Aim 2**: build predictive model `aim2_predictive_mod.R` ==> @JingnanBai
   - model training (random forest)
   - model evaluation
     - confusion matrix
