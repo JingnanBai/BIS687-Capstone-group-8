@@ -74,7 +74,4 @@ iv_filter <- function(data_woe, iv_limit = 0.02, ycol, positive = 1) {
 }
 
 
-### aim2: build predictive model with RF
-
-
 
