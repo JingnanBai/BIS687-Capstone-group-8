@@ -15,12 +15,12 @@ library(scorecard)
 library(MatchIt)
 
 # set working space
-setwd("C:/FOLD/workspace/yale_course/BIS687_capstoneii/ukbiobank")
+setwd("C:/FOLD/yale_course/BIS687_capstoneii/ukbiobank")
 source("utils.R")
 
 
 ### read data
-data = readRDS("data/ukbiobank.rds")
+data <- readRDS("data/ukbiobank.rds")
 dim(data) # 96512  1296
 
 var_data <- read.csv("data/variable_table.csv")
@@ -32,19 +32,15 @@ unique(var_data$ValueType)
 
 
 
-
-##### preprocessing #####
-
-# response
+### response
 data$parkinsons <- ifelse(is.na(data$date_of_parkinsons_disease_report_f42032_0_0), 0, 1) |>
   as.factor()
 summary(data$parkinsons)
-
 data.f <- data.frame("eid" = data$eid, "parkinsons" = data$parkinsons)
 skipli <- c("eid", "parkinsons")
 
 
-# data merge
+### data merge (instance)
 for (field in unique(var_data$field)){
   if (field %in% skipli){next}
   
@@ -71,7 +67,7 @@ for (field in unique(var_data$field)){
           data.f[paste(field, "_", inst, sep = "")] - 
           data.f[paste(field, "_", inst-1, sep = "")]
       }
-      else{
+      else if (temptype == "Categorical single"){
         data.f[paste(field, "_", inst, sep = "")] <- 
           data.f[paste(field, "_", inst, sep = "")] |> as.factor()
       }
@@ -80,40 +76,93 @@ for (field in unique(var_data$field)){
 }
 data <- data.f
 rm(data.f)
-dim(data) # 96512   964
+dim(data) # 96512   965
 
 
-# drop missing
+
+### drop missing
 missing_thr <- 0.8
 is_col_keep <- apply(data, 2, function(x){
   return(sum(is.na(x))/dim(data)[1] < missing_thr)
 }) 
 data <- data[, is_col_keep]
-dim(data) # keep 458/964
-# constant col
+dim(data) # 458
+
+### constant col
 is_col_keep <- apply(data, 2, function(x){
   freq_tab <- table(x)
   return ((max(freq_tab) / dim(data)[1]) < 0.999)
 })
 data <- data[, is_col_keep]
-dim(data) 
-
-# imputation <------------------------------------------------------ ! confirm sequence here !
-# data_imp <- mice(data, m=1, maxit=50, meth='pmm')
+dim(data) # 451
 
 
 
-
-### feature filtering
-
-# build WOE
+### WOE + iv for feature importance
 res_woe <- build_woe(data[, -which(names(data) == "eid")], 
                      ycol = "parkinsons", 
-                     positive = 1, is_dropsame = TRUE)
+                     positive = 1, is_dropsame = FALSE)
 data_woe <- res_woe$newdata
-dim(data_woe)
+dim(data_woe) # 450 (exclude eid)
+# iv (collinearity free)
+iv_info <- bind_rows(res_woe$woe_bins)
+iv_info <- iv_info |>
+  group_by(variable) |>
+  summarise(total_iv = max(total_iv)) |>
+  as.data.frame()
+iv_info['field'] = sapply(iv_info$variable, function(x){
+  if (substr(x, nchar(x)-1, nchar(x)-1) == "_"){x <- substr(x, 1, nchar(x) - 2)}
+  return(x)
+})
+iv_info <- merge(iv_info, var_data[, c("field", "ValueType")] |> unique(), 
+                 by.x = "field", by.y = "field", 
+                 all.x = TRUE)
+var_data <- iv_info[, c("field", "variable", "ValueType")]
+head(iv_info)
 
-# keep original features < -------------------------------- ! need previous imputation here !
+
+
+##### collinearity
+linearity_thre <- 0.8
+cat_var <- iv_info[iv_info$ValueType == "Categorical single", 
+                   c("variable", "field", "total_iv")]
+num_var <- iv_info[iv_info$ValueType != "Categorical single",
+                   c("variable", "field", "total_iv")] # 283
+### NMS filtering (numerical)
+num_corr <- cor(data[, colnames(data) %in% num_var$variable]) |> as.data.frame()
+num_iv <- num_var |> group_by(field) |> 
+  summarize(total_iv = sum(total_iv)) |>
+  arrange(desc(total_iv))
+num_drop <- c("eid", "parkinsons")
+for (field in num_iv$field){
+  if (field %in% num_drop){next}
+  tempcor <- num_corr[names(num_corr) %in% num_var[num_var$field == field, "variable"], ]
+  tempcor <- apply(tempcor, 2, max) |> na.omit() |> abs()
+  collist <- num_var[num_var$variable %in% names(tempcor[tempcor > linearity_thre]), "field"]
+  collist <- ifelse(field %in% collist, collist[collist != field], collist)
+  num_drop <- c(num_drop, collist) |> unique()
+}
+num_var_keep <- num_var[!(num_var$field %in% num_drop), "variable"]
+length(num_var_keep) # 255
+var_keep <- c(num_var_keep, cat_var$variable, c("parkinsons")) |> unique()
+length(var_keep)  # 422
+
+
+### iv filtering (keep WOE data)
+res_iv <- iv_filter(data_woe,
+                    iv_limit = 0.1, ycol = "parkinsons", positive = 1)
+data_iv <- res_iv$data_iv |> as.data.frame()  # 225
+# collinearity filtering
+tempcol <- sapply(colnames(data_iv), function(x){
+  if (substr(x, nchar(x)-3, nchar(x)) == "_woe"){
+    x <- substr(x, 1, nchar(x)-4)
+  }
+  return (x)
+})
+colnames(data_iv) <- tempcol
+data_iv_wcol <- data_iv[, colnames(data_iv) %in% var_keep]
+dim(data_iv_wcol)  # 211
+# keep original features <--- need previous imputation here
 # iv_info <- bind_rows(res_woe$woe_bins)
 # iv_info <- iv_info |>
 #   group_by(variable) |>
@@ -123,34 +172,48 @@ dim(data_woe)
 # data_iv["parkinsons"] <- data$parkinsons
 # dim(data_iv)
 
-# keep WOE data
-res_iv <- iv_filter(data_woe,
-                    iv_limit = 0.1, ycol = "parkinsons", positive = 1)
-data_iv <- res_iv$data_iv
-dim(data_iv)
-
-
 
 
 ### PSM (matching)
-
 psm_mod <- matchit(parkinsons ~.,
                    method = "nearest", distance = "glm", 
-                   data = data_iv)
+                   data = data_iv_wcol)
 # summary(psm_mod) # quite slow here ...
 # assess the quality of matches
 plot(psm_mod, 
      type = "density", 
      interactive = FALSE,
-     which.xs = ~ sex_woe + year_of_birth_woe) 
+     which.xs = ~ sex + year_of_birth) 
 # apply on dataset
-data_psm <- match.data(psm_mod) |> data.frame()
-data_psm <- data_psm[, -which(colnames(data_psm) %in% c("distance", "weights", "subclass"))]
-dim(data_psm)
+data.psm <- match.data(psm_mod) |> data.frame()
+data.psm <- data.psm[, -which(colnames(data.psm) %in% 
+                                c("eid", "distance", "weights", "subclass"))]
+dim(data.psm)
 
 
-### save
-saveRDS(data_psm, file = "data/mod_ukbiobank.rds")
+
+
+### save ###
+# original data
+data.baseline <- match.data(psm_mod, data = data) |> data.frame()
+data.baseline <- data.baseline[, -which(colnames(data.baseline) %in% 
+                                          c("eid", "distance", "weights", "subclass"))]
+# data.baseline <- mice(data.baseline, m=1, maxit=50, meth='cart') # slow ...
+dim(data.baseline)
+# (w/o nms)
+data.iv <- match.data(psm_mod, data = data_iv) |> data.frame()
+data.iv <- data.iv[, -which(colnames(data.iv) %in% 
+                              c("eid", "distance", "weights", "subclass"))]
+dim(data.iv)
+
+# variable directory
+saveRDS(var_data, file = "data/variable_field_map.rds")
+# baseline
+saveRDS(data.baseline, file = "data/aim2_ukbiobank_baseline.rds")
+# + iv/woe
+saveRDS(data.iv, file = "data/aim2_ukbiobank_iv.rds")
+# + iv/woe + nms
+saveRDS(data.psm, file = "data/aim2_ukbiobank.rds")
 
 
 
