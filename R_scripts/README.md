@@ -12,8 +12,8 @@ Group 8
 
 - **data preprocessing**: `preprocessing.R` ==> @JingnanBai
   - conduct data cleaning
-  - dealing with missing value
-  - WOE + IV for feature filtering
+  - WOE + IV for feature importance (preliminary)
+  - NMS frame to deal with collinearity
   - propensity score matching (PSM)
 
 <br/>
@@ -28,6 +28,8 @@ Group 8
     - confusion matrix
     - ROC / AUC
     - K-fold
+  - model comparison
+    - compare models (baseline data / dataset w iv / dataset w iv + nms) based on recall
   - feature importance
 
 
