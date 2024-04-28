@@ -157,29 +157,29 @@ impt <- impt[order(impt[, "MeanDecreaseGini"], decreasing = TRUE), ] |>
   data.frame()
 colnames(impt) <- c("MeanDecreaseGini")
 impt$var <- rownames(impt)
-impt <- merge(impt, var.map[, c("field", "variable")], 
+impt <- merge(impt, var.map[, c("field", "variable")],
               by.x = "var", by.y = "variable", all.x = TRUE)
-impt_sum <- impt |> 
+impt_sum <- impt |>
   group_by(field) |>
   summarise(importance_gini = sum(MeanDecreaseGini)) |>
   arrange(desc(importance_gini))
-head(impt_sum, 20)
+print(head(impt_sum, 50), n=50)
 
 
 ### assessment
-# baseline
-data.baseline$parkinsons <- as.factor(data.baseline$parkinsons)
-rf.res.baseline <- build_random_forest(data.baseline, ycol = "parkinsons",
-                                       is_kfold = TRUE, cv_num = 10, seed = 103221,
-                                       ntree = 100, maxnodes = 50, mtry = "auto", 
-                                       is_roc = FALSE)
-rf.res.baseline$eval_tab
-# + iv (w/o nms)
-data.iv$parkinsons <- as.factor(data.iv$parkinsons)
-rf.res.iv <- build_random_forest(data.iv, ycol = "parkinsons",
-                                 is_kfold = TRUE, cv_num = 10, seed = 103221,
-                                 ntree = 100, maxnodes = 50, mtry = "auto", 
-                                 is_roc = FALSE)
-rf.res.iv$eval_tab
+# # baseline
+# data.baseline$parkinsons <- as.factor(data.baseline$parkinsons)
+# rf.res.baseline <- build_random_forest(data.baseline, ycol = "parkinsons",
+#                                        is_kfold = TRUE, cv_num = 10, seed = 103221,
+#                                        ntree = 100, maxnodes = 50, mtry = "auto", 
+#                                        is_roc = FALSE)
+# rf.res.baseline$eval_tab
+# # + iv (w/o nms)
+# data.iv$parkinsons <- as.factor(data.iv$parkinsons)
+# rf.res.iv <- build_random_forest(data.iv, ycol = "parkinsons",
+#                                  is_kfold = TRUE, cv_num = 10, seed = 103221,
+#                                  ntree = 100, maxnodes = 50, mtry = "auto", 
+#                                  is_roc = FALSE)
+# rf.res.iv$eval_tab
 
 
