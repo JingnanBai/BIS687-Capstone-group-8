@@ -31,9 +31,14 @@ var_data <- merge(var_data, var_data_type[, c('FieldID', 'ValueType')],
 unique(var_data$ValueType)
 
 
-
 ### response
-data$parkinsons <- ifelse(is.na(data$date_of_parkinsons_disease_report_f42032_0_0), 0, 1) |>
+data$recruit_year <- (data$year_of_birth_f34_0_0 |> as.integer()) + 
+  (data$age_at_recruitment_f21022_0_0 |> as.integer())
+data$parkinsons <- data$date_of_parkinsons_disease_report_f42032_0_0 |> 
+  substr(1, 4) |> as.integer()
+data <- data[(is.na(data$parkinsons))|(data$recruit_year < data$parkinsons), ]
+dim(data)
+data$parkinsons <- ifelse(is.na(data$parkinsons), 0, 1) |>
   as.factor()
 summary(data$parkinsons)
 data.f <- data.frame("eid" = data$eid, "parkinsons" = data$parkinsons)
@@ -129,7 +134,8 @@ cat_var <- iv_info[iv_info$ValueType == "Categorical single",
 num_var <- iv_info[iv_info$ValueType != "Categorical single",
                    c("variable", "field", "total_iv")] # 283
 ### NMS filtering (numerical)
-num_corr <- cor(data[, colnames(data) %in% num_var$variable]) |> as.data.frame()
+num_corr <- cor(data[, colnames(data) %in% num_var$variable]) 
+num_corr <- num_corr |> as.data.frame()
 num_iv <- num_var |> group_by(field) |> 
   summarize(total_iv = sum(total_iv)) |>
   arrange(desc(total_iv))
@@ -214,7 +220,6 @@ saveRDS(data.baseline, file = "data/aim2_ukbiobank_baseline.rds")
 saveRDS(data.iv, file = "data/aim2_ukbiobank_iv.rds")
 # + iv/woe + nms
 saveRDS(data.psm, file = "data/aim2_ukbiobank.rds")
-
 
 
 
