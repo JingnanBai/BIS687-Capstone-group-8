@@ -13,7 +13,7 @@ Group 8
 - **data preprocessing**: `preprocessing.R` ==> @JingnanBai
   - conduct data cleaning
   - WOE + IV for feature importance (preliminary)
-  - NMS frame to deal with collinearity
+  - NMS algorithm to deal with collinearity
   - propensity score matching (PSM)
 
 <br/>
@@ -26,8 +26,9 @@ Group 8
   - **Plan 2**: analyze longitudinal trends following PD diagnosis `aim1_task2.Rmd` ==> @kexinwang3
     - propensity score matching
     - mixed-effects model & longitudinal trend
-    
-    ![workflow](https://github.com/JingnanBai/BIS687-Capstone-group-8/blob/main/figure/workflow.jpg)
+
+
+    <img src="https://github.com/JingnanBai/BIS687-Capstone-group-8/blob/main/figure/workflow.jpg" alt="workflow" width="75%;" height="75%;" margin="auto;"/>
 
 <br/>
 
