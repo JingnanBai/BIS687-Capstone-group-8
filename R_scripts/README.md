@@ -20,6 +20,7 @@ Group 8
 
 - **Aim 1**: explore features distinguishing people with/without PD
   - **Data Exploration**: `data_exploration.Rmd`
+
   - **Plan 1**: investigate key baseline characteristics prior to PD onset
  
   - **Plan 2**: analyze longitudinal trends following PD diagnosis `aim1_task2.Rmd` ==> @kexinwang3
