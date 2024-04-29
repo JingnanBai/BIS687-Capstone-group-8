@@ -1,0 +1,26 @@
+---
+title: "Data Exploration"
+author: "Yiming Miao & Kexin Wang"
+output: pdf_document
+---
+
+## Load dataset and libraries
+```{r, message=FALSE, warning=FALSE}
+library(ggplot2)
+data <- readRDS("data/ukbiobank.rds")
+```
+
+## Histogram of date of PD reporting
+```{r, fig.height=3.5, fig.width=5}
+date_PD <- data$date_of_parkinsons_disease_report_f42032_0_0
+df_date <- data.frame(date_PD = as.Date(date_PD[!is.na(date_PD)], format = "%Y-%m-%d"))
+df_date$year_PD <- format(df_date$date_PD, "%Y")
+
+ggplot(df_date, aes(x = year_PD)) +
+  geom_bar(fill = "lightblue") +
+  labs(title = "Histogram of PD Reporting Year", 
+       x = "Reporting Year", y = "Count") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 7))
+```
+
