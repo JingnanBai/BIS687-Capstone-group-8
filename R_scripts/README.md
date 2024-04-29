@@ -25,8 +25,8 @@ Group 8
   - **Plan 2**: analyze longitudinal trends following PD diagnosis `aim1_task2.Rmd` ==> @kexinwang3
     - propensity score matching
     - mixed-effects model & longitudinal trend
-
-    ![workflow](https://github.com/JingnanBai/BIS687-Capstone-group-8/figure/workflow)
+    
+    ![workflow](https://github.com/JingnanBai/BIS687-Capstone-group-8/blob/main/figure/workflow.jpg)
 
 <br/>
 
