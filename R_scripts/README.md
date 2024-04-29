@@ -18,7 +18,15 @@ Group 8
 
 <br/>
 
-- **Aim 1**:
+- **Aim 1**: explore features distinguishing people with/without PD
+  - **Data Exploration**: `data_exploration.Rmd`
+  - **Plan 1**: investigate key baseline characteristics prior to PD onset
+ 
+  - **Plan 2**: analyze longitudinal trends following PD diagnosis `aim1_task2.Rmd` ==> @kexinwang3
+    - propensity score matching
+    - mixed-effects model & longitudinal trend
+    
+    ![workflow](https://github.com/JingnanBai/BIS687-Capstone-group-8/blob/main/figure/workflow.jpg)
 
 <br/>
 
