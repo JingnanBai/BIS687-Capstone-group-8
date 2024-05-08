@@ -26,8 +26,10 @@ Group 8
 
 <br/>
 
+<br/>
+
 - **Aim 2**: build predictive model `aim2_predictive_mod.R` ==> @JingnanBai
-  - **data preprocessing**: `preprocessing.R` ==> @JingnanBai
+  - **data preprocessing**: `aim2_preprocessing.R` ==> @JingnanBai
     - basic data cleaning
     - WOE + IV for feature importance (preliminary)
     - NMS algorithm to deal with collinearity
