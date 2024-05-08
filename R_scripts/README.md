@@ -20,7 +20,7 @@ Group 8
     - forward stepwise selection
     - logistic regression
 
-<img src="https://github.com/JingnanBai/BIS687-Capstone-group-8/blob/main/figure/workflow aim1 task1.jpg" alt="workflow" width="75%;" height="75%;" margin="auto;"/>
+<img src="https://github.com/JingnanBai/BIS687-Capstone-group-8/blob/main/figure/workflow aim1 task1.png" alt="workflow" width="75%;" height="75%;" margin="auto;"/>
  
   - **Task 2**: analyze longitudinal trends following PD diagnosis `aim1_task2.Rmd` ==> @kexinwang3
     - propensity score matching
