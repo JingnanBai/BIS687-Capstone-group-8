@@ -10,12 +10,6 @@ Group 8
 
 <br/>
 
-- **data preprocessing**: `preprocessing.R` ==> @JingnanBai
-  - conduct data cleaning
-  - WOE + IV for feature importance (preliminary)
-  - NMS algorithm to deal with collinearity
-  - propensity score matching (PSM)
-
 <br/>
 
 - **Aim 1**: explore features distinguishing people with/without PD
@@ -33,6 +27,11 @@ Group 8
 <br/>
 
 - **Aim 2**: build predictive model `aim2_predictive_mod.R` ==> @JingnanBai
+  - **data preprocessing**: `preprocessing.R` ==> @JingnanBai
+    - basic data cleaning
+    - WOE + IV for feature importance (preliminary)
+    - NMS algorithm to deal with collinearity
+    - propensity score matching (PSM)
   - model training (random forest)
   - model evaluation
     - confusion matrix
