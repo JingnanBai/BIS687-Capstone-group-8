@@ -19,7 +19,7 @@ Data: UKbiobank
 ### Aim1: Explore features distinguishing people with and without PD
 
 #### Challenge
-- Overlaps and gaps between the periods of data collection and PD occurrence reporting
+- Overlaps and gaps between the 4 instances of feature collection point and PD occurrence reporting
 
 #### Task 1: Investigate key baseline characteristics prior to PD onset
 
