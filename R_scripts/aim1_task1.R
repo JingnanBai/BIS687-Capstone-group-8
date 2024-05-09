@@ -59,6 +59,8 @@ dim(data2.2) # 720 323
 
 # Some variables have only 1 level that makes regression unable to fit
 # Examine number of levels for each variable
+# Reference: 
+# Li Z. How to debug "contrasts can be applied only to factors with 2 or more levels" error? August 21, 2018. Accessed April 27, 2024.
 debug_contr_error <- function (dat, subset_vec = NULL) {
   if (!is.null(subset_vec)) {
     ## step 0
