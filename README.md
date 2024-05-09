@@ -104,14 +104,17 @@ Literature Review, Information Collected, Introduction and Background, Report St
 ## Appendix: Project file structure
 
 ```
-├─figure                                 // figure hosting for proposal & report file
+├─figure                                // figure hosting for proposal & report file
 |
-├─Group 8 Final Report
-│      BIS 687 Group 8 Report.pdf       // final report
+├─final_report
+│      BIS687-Group-8-final-report.pdf  // final report knit with rmd
+|      report.RMD
+|      report.tex
+|      template.tex                     // template for rmd (same as proposal)
 │      
 ├─proposal  
 │      
-└─R_scripts                            // project codes & R scripts
+└─R_scripts                             // project codes & R scripts
 │        aim1_task1.R                   // Aim1_Task 1  @YimingMiao
 │        aim1_task2.pdf                 // Aim1_Task 2  @kexinwang3
 │        aim1_task2.Rmd                 
