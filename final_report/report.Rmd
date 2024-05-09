@@ -106,7 +106,9 @@ of Parkinson's disease (PD) in its early stages.
 
 # Rationale
 
-A. Significance Data analysis related to Parkinson's disease (PD) is
+A. Significance 
+
+Data analysis related to Parkinson's disease (PD) is
 crucial for improving our knowledge of this severe neurodegenerative
 condition. Researchers can find subtle patterns and correlations between
 genetic, environmental, and lifestyle factors that influence the
@@ -152,35 +154,33 @@ legitimate and applicable.
 
 # Research Plan
 
-Our research on Parkinson's disease (PD) is structured into a four-step
+Our research on Parkinson's disease (PD) is structured into a three-step
 plan designed for maximum efficiency and clarity, ensuring a thorough
 investigation into the complexities of PD.
 
-Step 1: Data Processing The initial stage of our research involves
+
+Step 1: Exploratory Data Analysis (EDA) 
+
+During the EDA phase, we delve
+into the dataset to understand data structure and extract preliminary insights. 
+This important stage directs the course of our more in-depth research and aids 
+in our understanding of the data's underlying
+structure. At this point, we start to formulate theories regarding the
+connections between the data that might be relevant to Parkinson's
+disease.
+
+Step 2: Data Processing 
+
+The initial stage of our research involves
 addressing the inherent imbalance within our dataset, a common challenge
 in medical research, which would be addressed with propensity score
 matching (PSM). We also apply techniques such as WOE and information
 value for feature filtering, while using the NMS algorithm to deal with
 potential collinearity.
 
-Step 2: Exploratory Data Analysis (EDA) During the EDA phase, we delve
-into the dataset to extract preliminary insights and identify potential
-predictors of PD. This important stage directs the course of our more
-in-depth research and aids in our understanding of the data's underlying
-structure. At this point, we start to formulate theories regarding the
-connections between the data that might be relevant to Parkinson's
-disease.
+Step 3: Model Building and Evaluation 
 
-Step 3: Analysis of Feature Importance We use complex algorithms to
-perform a feature importance analysis after EDA. This is an important
-step because it establishes which factors have greatest impacts on the
-likelihood of getting Parkinson's disease. By evaluating the relative
-significance and causal connections between these characteristics, we
-are able to better understand the complex nature of Parkinson's disease.
-The knowledge acquired here is crucial for later phases, enabling
-targeted and knowledgeable model development.
-
-Step 4: Model Building and Evaluation The final stage involves
+The final stage involves
 constructing predictive models using techniques such as Logistic
 Regression, Mixed-effects Model, Random Forest. We carefully evaluate
 these models to make sure they are able to reliably predict PD risk and
@@ -194,7 +194,7 @@ Our objective is to uncover deep understanding into the factors that
 predict Parkinson's disease (PD) and to offer strong frameworks for
 managing and predicting the disease by carefully navigating these steps.
 
-# Specific Aim 1: To explore features distinguishing people with and without PD.
+# Specific Aim 1: Investigate Key Inferences for Pre-Diagnostic and Post-Diagnostic PD Patients
 
 ## Hypothesis
 
@@ -233,7 +233,9 @@ separate analyses:
 Cohort 1: participants who were not diagnosed with PD at baseline but
 received a diagnosis in subsequent follow-ups. We compared their
 baseline characteristics with those of individuals without PD to
-identify potential risk factors or early indicators of PD. Cohort 2:
+identify potential risk factors or early indicators of PD. 
+
+Cohort 2:
 patients who have already been diagnosed with PD at baseline and four
 instances were documented after the PD report. This cohort allows us to
 examine the progression of PD and its impact on quality of life over
@@ -578,7 +580,7 @@ validate the conclusions drawn in aim 1.
 
 <br/>
 
-## Result
+## Results
 
 The data processing and model construction methods have been outlined
 above. Using 742 samples (371 incident cases and 371 matched
@@ -678,7 +680,7 @@ associated with the disease to reduce its overall incidence.
 ::: {style="page-break-after: always;"}
 :::
 
-# Reference
+# References
 
 National Institute of Neurological Disorders and Stroke. (2023, January
 30). Parkinson's Disease: Challenges, Progress, and Promise. Accessed

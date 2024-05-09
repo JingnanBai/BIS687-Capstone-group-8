@@ -127,7 +127,7 @@
 \maketitle
 
 \hypertarget{introduction}{%
-\subsubsection{Introduction}\label{introduction}}
+\section{Introduction}\label{introduction}}
 
 Parkinson's disease (PD) ranks as the second-most common
 neurodegenerative disorder in the US, affecting nearly 90,000
@@ -187,18 +187,20 @@ of Parkinson's disease (PD) in its early stages.
 \hypertarget{rationale}{%
 \section{Rationale}\label{rationale}}
 
-A. Significance Data analysis related to Parkinson's disease (PD) is
-crucial for improving our knowledge of this severe neurodegenerative
-condition. Researchers can find subtle patterns and correlations between
-genetic, environmental, and lifestyle factors that influence the
-development and progression of Parkinson's disease (PD) by carefully
-examining data related to the disease. The development of predictive
-models that can identify people at increased risk much earlier than is
-currently feasible will require this deeper understanding. The
-management of Parkinson's disease (PD) depends heavily on early
-detection because it enables the implementation of interventions that
-may significantly alter the course of the disease, possibly delaying the
-beginning of severe symptoms and extending patient independence.
+A. Significance
+
+Data analysis related to Parkinson's disease (PD) is crucial for
+improving our knowledge of this severe neurodegenerative condition.
+Researchers can find subtle patterns and correlations between genetic,
+environmental, and lifestyle factors that influence the development and
+progression of Parkinson's disease (PD) by carefully examining data
+related to the disease. The development of predictive models that can
+identify people at increased risk much earlier than is currently
+feasible will require this deeper understanding. The management of
+Parkinson's disease (PD) depends heavily on early detection because it
+enables the implementation of interventions that may significantly alter
+the course of the disease, possibly delaying the beginning of severe
+symptoms and extending patient independence.
 
 In addition, the examination of Parkinson's disease data makes it easier
 to identify particular biomarkers that can be used for both continuous
@@ -230,41 +232,36 @@ legitimate and applicable.
 \hypertarget{research-plan}{%
 \section{Research Plan}\label{research-plan}}
 
-Our research on Parkinson's disease (PD) is structured into a four-step
+Our research on Parkinson's disease (PD) is structured into a three-step
 plan designed for maximum efficiency and clarity, ensuring a thorough
 investigation into the complexities of PD.
 
-Step 1: Data Processing The initial stage of our research involves
-addressing the inherent imbalance within our dataset, a common challenge
-in medical research, which would be addressed with propensity score
-matching (PSM). We also apply techniques such as WOE and information
-value for feature filtering, while using the NMS algorithm to deal with
-potential collinearity.
+Step 1: Exploratory Data Analysis (EDA)
 
-Step 2: Exploratory Data Analysis (EDA) During the EDA phase, we delve
-into the dataset to extract preliminary insights and identify potential
-predictors of PD. This important stage directs the course of our more
-in-depth research and aids in our understanding of the data's underlying
-structure. At this point, we start to formulate theories regarding the
-connections between the data that might be relevant to Parkinson's
-disease.
+During the EDA phase, we delve into the dataset to understand data
+structure and extract preliminary insights. This important stage directs
+the course of our more in-depth research and aids in our understanding
+of the data's underlying structure. At this point, we start to formulate
+theories regarding the connections between the data that might be
+relevant to Parkinson's disease.
 
-Step 3: Analysis of Feature Importance We use complex algorithms to
-perform a feature importance analysis after EDA. This is an important
-step because it establishes which factors have greatest impacts on the
-likelihood of getting Parkinson's disease. By evaluating the relative
-significance and causal connections between these characteristics, we
-are able to better understand the complex nature of Parkinson's disease.
-The knowledge acquired here is crucial for later phases, enabling
-targeted and knowledgeable model development.
+Step 2: Data Processing
 
-Step 4: Model Building and Evaluation The final stage involves
-constructing predictive models using techniques such as Logistic
-Regression, Mixed-effects Model, Random Forest. We carefully evaluate
-these models to make sure they are able to reliably predict PD risk and
-demonstrate good generalization across a wide range of populations. This
-comprehensive evaluation procedure is necessary to confirm that our
-models are accurate.
+The initial stage of our research involves addressing the inherent
+imbalance within our dataset, a common challenge in medical research,
+which would be addressed with propensity score matching (PSM). We also
+apply techniques such as WOE and information value for feature
+filtering, while using the NMS algorithm to deal with potential
+collinearity.
+
+Step 3: Model Building and Evaluation
+
+The final stage involves constructing predictive models using techniques
+such as Logistic Regression, Mixed-effects Model, Random Forest. We
+carefully evaluate these models to make sure they are able to reliably
+predict PD risk and demonstrate good generalization across a wide range
+of populations. This comprehensive evaluation procedure is necessary to
+confirm that our models are accurate.
 
 This research plan enables us to approach Parkinson's disease data with
 precision, from initial data correction to advanced model development.
@@ -272,10 +269,10 @@ Our objective is to uncover deep understanding into the factors that
 predict Parkinson's disease (PD) and to offer strong frameworks for
 managing and predicting the disease by carefully navigating these steps.
 
-\hypertarget{specific-aim-1-to-explore-features-distinguishing-people-with-and-without-pd.}{%
-\section{Specific Aim 1: To explore features distinguishing people with
-and without
-PD.}\label{specific-aim-1-to-explore-features-distinguishing-people-with-and-without-pd.}}
+\hypertarget{specific-aim-1-investigate-key-inferences-for-pre-diagnostic-and-post-diagnostic-pd-patients}{%
+\section{Specific Aim 1: Investigate Key Inferences for Pre-Diagnostic
+and Post-Diagnostic PD
+Patients}\label{specific-aim-1-investigate-key-inferences-for-pre-diagnostic-and-post-diagnostic-pd-patients}}
 
 \hypertarget{hypothesis}{%
 \subsection{Hypothesis}\label{hypothesis}}
@@ -317,11 +314,12 @@ separate analyses:
 Cohort 1: participants who were not diagnosed with PD at baseline but
 received a diagnosis in subsequent follow-ups. We compared their
 baseline characteristics with those of individuals without PD to
-identify potential risk factors or early indicators of PD. Cohort 2:
-patients who have already been diagnosed with PD at baseline and four
-instances were documented after the PD report. This cohort allows us to
-examine the progression of PD and its impact on quality of life over
-time.
+identify potential risk factors or early indicators of PD.
+
+Cohort 2: patients who have already been diagnosed with PD at baseline
+and four instances were documented after the PD report. This cohort
+allows us to examine the progression of PD and its impact on quality of
+life over time.
 
 Considering all the background information, our analysis incorporated a
 few assumptions. For example, we assumed that the PD diagnosis time is
@@ -356,8 +354,8 @@ variables related to PD onset.
 
 \begin{figure}
 \centering
-\includegraphics{../assets/Figure 1 - Workflow of Aim 1 - Task 1.png}
-\caption{Figure 1: Workflow of Aim 1 - Task 1}
+\includegraphics{../figure/Figure 1 - Workflow of Aim 1 - Task 1.png}
+\caption{Workflow of Aim 1 - Task 1}
 \end{figure}
 
 \hypertarget{logistic-regression}{%
@@ -396,9 +394,8 @@ as significant factors for PD onset.
 
 \begin{figure}
 \centering
-\includegraphics{../assets/Figure 2 - Odds Ratio of PD for Statistically Significant Variables.png}
-\caption{Figure 2: Odds Ratio of PD for Statistically Significant
-Variables}
+\includegraphics{../figure/Figure 2 - Odds Ratio of PD for Statistically Significant Variables.png}
+\caption{Odds Ratio of PD for Statistically Significant Variables}
 \end{figure}
 
 In conclusion, our modeling results generally align with existing
@@ -457,8 +454,8 @@ matching process.
 
 \begin{figure}
 \centering
-\includegraphics{../assets/Figure 3 - Workflow of Aim 1 - Task 2.png}
-\caption{Figure 3: Workflow of Aim 1 - Task 2}
+\includegraphics{../figure/Figure 3 - Workflow of Aim 1 - Task 2.png}
+\caption{Workflow of Aim 1 - Task 2}
 \end{figure}
 
 \hypertarget{mixed-effects-model}{%
@@ -491,7 +488,11 @@ significant differences between the two groups. In the right panel, we
 visualized the longitudinal trends across 4 instances for some selected
 significant features.
 
-Figure 4: Visualization of Longitudinal Trends
+\begin{figure}
+\centering
+\includegraphics{../figure/Figure 4 - Visualization of Longitudinal Trends.png}
+\caption{Visualization of Longitudinal Trends}
+\end{figure}
 
 \hypertarget{limitations-1}{%
 \subsubsection{Limitations}\label{limitations-1}}
@@ -689,8 +690,8 @@ validate the conclusions drawn in aim 1.
   feature engineering processes.
 \end{enumerate}
 
-\hypertarget{result}{%
-\subsection{Result}\label{result}}
+\hypertarget{results-1}{%
+\subsection{Results}\label{results-1}}
 
 The data processing and model construction methods have been outlined
 above. Using 742 samples (371 incident cases and 371 matched
@@ -701,12 +702,13 @@ The model performance, assessed with 10-fold cross-validation, is as
 follows:
 
 \begin{longtable}[]{@{}llll@{}}
-\toprule
+\toprule\noalign{}
 recall & AUC & accuracy & F1-score \\
-\midrule
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 0.562 & 0.546 & 0.501 & 0.517 \\
-\bottomrule
 \end{longtable}
 
 From the results above, the recall reaches 0.562 with an AUC of
@@ -735,12 +737,13 @@ score from 10-fold cross-validation. The results of the model comparison
 are as follows:
 
 \begin{longtable}[]{@{}llll@{}}
-\toprule
+\toprule\noalign{}
 & Baseline & + IV & +IV + NMS \\
-\midrule
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{recall} & 0.487 & 0.504 & 0.562 \\
-\bottomrule
 \end{longtable}
 
 The final model setting, which incorporates both IV filtering (with WOE
@@ -792,8 +795,8 @@ increase intervention opportunities, while also potentially developing
 preventive public health initiatives by identifying lifestyle factors
 associated with the disease to reduce its overall incidence.
 
-\hypertarget{reference}{%
-\section{Reference}\label{reference}}
+\hypertarget{references}{%
+\section{References}\label{references}}
 
 National Institute of Neurological Disorders and Stroke. (2023, January
 30). Parkinson's Disease: Challenges, Progress, and Promise. Accessed
