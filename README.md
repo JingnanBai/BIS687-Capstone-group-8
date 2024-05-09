@@ -97,19 +97,23 @@ Literature Review, Information Collected, Introduction and Background, Report St
 ```
 ├─figure                                 // figure hosting for proposal & report file
 |
+├─ Literature Review, Preparation for project // @QYHuang00
+|
 ├─Group 8 Final Report
 │      BIS 687 Group 8 Report.pdf       // final report
 │      
 ├─proposal  
 │      
 └─R_scripts                            // project codes & R scripts
-        aim1_task1.R                   // Aim1_Task 1  @YimingMiao
-        aim1_task2.pdf                 // Aim1_Task 2  @kexinwang3
-        aim1_task2.Rmd                 
-        aim2_predictive_mod.R          // Aim2 @JingnanBai
-        aim2_preprocessing.R
-        data_exploration.pdf           // EDA @kexinwang3
-        data_exploration.Rmd
-        utils.R                        // funtion for aim2 @JingnanBai
-        README.md
+│        aim1_task1.R                   // Aim1_Task 1  @YimingMiao
+│        aim1_task2.pdf                 // Aim1_Task 2  @kexinwang3
+│        aim1_task2.Rmd                 
+│        aim2_predictive_mod.R          // Aim2 @JingnanBai
+│        aim2_preprocessing.R
+│        data_exploration.pdf           // EDA @kexinwang3
+│        data_exploration.Rmd
+│        utils.R                        // funtion for aim2 @JingnanBai
+└─       README.md
+└─ Report consolidation and organization // @QYHuang00
+
 ```
