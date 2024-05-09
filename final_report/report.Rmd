@@ -40,7 +40,7 @@ knitr::knit_hooks$set(plot = function(x, options) {  # set new plot hook ...
 
 <br/>
 
-### Introduction
+# Introduction
 
 Parkinson's disease (PD) ranks as the second-most common
 neurodegenerative disorder in the US, affecting nearly 90,000
@@ -267,7 +267,7 @@ and categorical variables with near zero variance. These were then
 analyzed using forward stepwise selection to pinpoint critical variables
 related to PD onset.
 
-![Figure 1: Workflow of Aim 1 - Task
+![Workflow of Aim 1 - Task
 1](../assets/Figure%201%20-%20Workflow%20of%20Aim%201%20-%20Task%201.png)
 
 ### Logistic Regression
@@ -301,7 +301,7 @@ lower PD risk, potentially indicating issues like poor sleep quality and
 sleep fragmentation. Lastly, sensitivity or hurt feelings also emerged
 as significant factors for PD onset.
 
-![Figure 2: Odds Ratio of PD for Statistically Significant
+![Odds Ratio of PD for Statistically Significant
 Variables](../assets/Figure%202%20-%20Odds%20Ratio%20of%20PD%20for%20Statistically%20Significant%20Variables.png)
 
 In conclusion, our modeling results generally align with existing
@@ -355,8 +355,9 @@ us identify 81 unique features, each consistently recorded across four
 instances, in addition to the 4 demographic features used in our
 matching process.
 
-![Figure 3: Workflow of Aim 1 - Task
+![Workflow of Aim 1 - Task
 2](../assets/Figure%203%20-%20Workflow%20of%20Aim%201%20-%20Task%202.png)
+
 
 ### Mixed-effects Model
 
@@ -386,7 +387,8 @@ significant differences between the two groups. In the right panel, we
 visualized the longitudinal trends across 4 instances for some selected
 significant features.
 
-Figure 4: Visualization of Longitudinal Trends
+![Visualization of Longitudinal
+Trends](../assets/Figure%204%20-%20Visualization%20of%20Longitudinal%20Trends.png)
 
 ### Limitations
 
@@ -673,7 +675,8 @@ associated with the disease to reduce its overall incidence.
 
 <br/>
 
-<div style="page-break-after: always;"></div>
+::: {style="page-break-after: always;"}
+:::
 
 # Reference
 
@@ -682,39 +685,37 @@ National Institute of Neurological Disorders and Stroke. (2023, January
 February 21, 2024. Mayo Clinic. (2023, May 26). Parkinson's Disease.
 Accessed February 21, 2024. UK Biobank. (n.d.). What is UK Biobank?
 Accessed February 21, 2024. National Institute on Aging. (2022, April
-14). 
+14).
 
-Parkinson's Disease: Causes, Symptoms, and Treatments. Accessed
-February 21, 2024. UK Biobank. (n.d.). View the Data Showcase. Accessed
-February 21, 2024. <https://biobank.ctsu.ox.ac.uk/crystal/> Park, H. A.,
-& Ellis, A. C. (2020). Dietary Antioxidants and Parkinson's Disease.
-Antioxidants (Basel), 9(7), 570. <https://doi.org/10.3390/antiox9070570>
+Parkinson's Disease: Causes, Symptoms, and Treatments. Accessed February
+21, 2024. UK Biobank. (n.d.). View the Data Showcase. Accessed February
+21, 2024. <https://biobank.ctsu.ox.ac.uk/crystal/> Park, H. A., & Ellis,
+A. C. (2020). Dietary Antioxidants and Parkinson's Disease. Antioxidants
+(Basel), 9(7), 570. <https://doi.org/10.3390/antiox9070570>
 
 Zuzuárregui JRP, During EH. Sleep Issues in Parkinson's Disease and
 Their Management. Neurotherapeutics. 2020;17(4):1480-1494.
 <doi:10.1007/s13311-020-00938-y>.
-<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7851262/> 
+<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7851262/>
 
-Gjerstad MD,
-Wentzel-Larsen T, Aarsland D, Larsen JP. Insomnia in Parkinson's
-disease: frequency and progression over time. J Neurol Neurosurg
-Psychiatry. 2007;78(5):476-479. <doi:10.1136/jnnp.2006.100370>.
-<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2117851/> 
+Gjerstad MD, Wentzel-Larsen T, Aarsland D, Larsen JP. Insomnia in
+Parkinson's disease: frequency and progression over time. J Neurol
+Neurosurg Psychiatry. 2007;78(5):476-479.
+<doi:10.1136/jnnp.2006.100370>.
+<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2117851/>
 
-Santiago JA,
-Bottero V, Potashkin JA. Biological and Clinical Implications of
-Comorbidities in Parkinson's Disease. Front Aging Neurosci. 2017;9:394.
-Published 2017 Dec 4. <doi:10.3389/fnagi.2017.00394>.
-<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5722846/> 
+Santiago JA, Bottero V, Potashkin JA. Biological and Clinical
+Implications of Comorbidities in Parkinson's Disease. Front Aging
+Neurosci. 2017;9:394. Published 2017 Dec 4.
+<doi:10.3389/fnagi.2017.00394>.
+<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5722846/>
 
-Chairta, P. P.,
-Hadjisavvas, A., Georgiou, A. N., et al. (2021). Prediction of
-Parkinson's Disease Risk Based on Genetic Profile and Established Risk
-Factors. Genes (Basel), 12(8), 1278.
-<https://doi.org/10.3390/genes12081278> 
+Chairta, P. P., Hadjisavvas, A., Georgiou, A. N., et al. (2021).
+Prediction of Parkinson's Disease Risk Based on Genetic Profile and
+Established Risk Factors. Genes (Basel), 12(8), 1278.
+<https://doi.org/10.3390/genes12081278>
 
-Yoon, S. Y., Park, Y. H., Lee,
-H. J., Kang, D. R., & Kim, Y. W. (2022). Lifestyle Factors and Parkinson
-Disease Risk: Korean Nationwide Cohort Study With Repeated Health
-Screening Data. Neurology, 98(6), e641-e652.
+Yoon, S. Y., Park, Y. H., Lee, H. J., Kang, D. R., & Kim, Y. W. (2022).
+Lifestyle Factors and Parkinson Disease Risk: Korean Nationwide Cohort
+Study With Repeated Health Screening Data. Neurology, 98(6), e641-e652.
 <https://doi.org/10.1212/WNL.0000000000012942>
