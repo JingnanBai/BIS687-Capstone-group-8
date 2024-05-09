@@ -12,7 +12,7 @@ Kexin Wang, Yiming Miao, Jingnan Bai, Qiyu Huang
 
 
 
-## introduction
+## Introduction
 
 data: UKbiobank
 
@@ -20,11 +20,18 @@ data: UKbiobank
 
 #### Task 1: Investigate key baseline characteristics prior to PD onset
 
-contributor: @YimingMiao
+> contributor: @YimingMiao
+
+- propensity score matching
+- forward stepwise selection
+- logistic regression
 
 #### Task 2: Analyze longitudinal trends following PD diagnosis   
 
-contributor: @kexinwang3
+> contributor: @kexinwang3
+
+- propensity score matching
+- mixed-effects model & longitudinal trend
 
 <br/>
 
@@ -63,7 +70,7 @@ Contribute to early detection of the disease, while constructing a cost-efficien
 
 <br/>
 
-## contribution
+## Contribution
 
 Aim1:
 - Task 1: @YimingMiao
