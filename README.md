@@ -129,6 +129,8 @@ Contribute to early detection of the disease, while constructing a cost-efficien
 
 ## Appendix: Project file structure
 
+> please do NOT edit this part as it is ONLY a reference for file structure (not a place to show your contribution :)
+
 ```
 ├─figure                                // figure hosting for proposal & report file
 |
@@ -150,6 +152,5 @@ Contribute to early detection of the disease, while constructing a cost-efficien
 │        data_exploration.Rmd
 │        utils.R                        // funtion for aim2 @JingnanBai
 └─       README.md
-└─ Report consolidation and organization // @QYHuang00
 
 ```
