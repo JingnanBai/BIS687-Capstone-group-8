@@ -10,22 +10,6 @@ Kexin Wang, Yiming Miao, Jingnan Bai, Qiyu Huang
 
 <br/>
 
-## Contribution
-
-Aim1: (literature review, methodology, R codes, improvement & final report)
-- Task 1: @YimingMiao
-- Task 2: @kexinwang3
-
-Aim2: @Jingnan Bai (literature review, methodology, R codes, improvement & final report)
-
-final report (knit with RMD): @JingnanBai, @YimingMiao, @kexinwang3
-
-Literature Review, Information Collected, Introduction and Background, Report Struction and Report Editing : @QYHuang00
-
-<br/>
-
-<br/>
-
 <br/>
 
 ## Introduction
