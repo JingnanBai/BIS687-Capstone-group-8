@@ -14,6 +14,8 @@ Kexin Wang, Yiming Miao, Jingnan Bai, Qiyu Huang
 
 ## Introduction
 
+Parkinson's disease (PD) stands as the second-most prevalent neurodegenerative disorder in the United States, significantly deteriorating the quality of life for those affected. This disease's widespread effects not only make daily living difficult for people, but they also place a significant strain on healthcare systems.
+
 Data: UKbiobank
 
 ### Aim1: Explore features distinguishing people with and without PD
