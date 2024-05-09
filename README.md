@@ -14,7 +14,7 @@ Kexin Wang, Yiming Miao, Jingnan Bai, Qiyu Huang
 
 ## Introduction
 
-data: UKbiobank
+Data: UKbiobank
 
 ### Aim1: Explore features distinguishing people with and without PD
 
@@ -22,16 +22,24 @@ data: UKbiobank
 
 > contributor: @YimingMiao
 
-- propensity score matching
-- forward stepwise selection
-- logistic regression
+- Experimental Approach
+    - propensity score matching
+    - forward stepwise selection
+    - logistic regression
+- Summary
+    - odds of PD higher among participants who were observed with lower average acceleration
+    - people with the following life habits less likely to encounter PD: insomnia, more dried fruit intake, less water intake, no major dietary changes in the last 5 years
 
 #### Task 2: Analyze longitudinal trends following PD diagnosis   
 
 > contributor: @kexinwang3
 
-- propensity score matching
-- mixed-effects model & longitudinal trend
+- Experimental Approach
+    - propensity score matching
+    - mixed-effects model & longitudinal trend after PD diagnosis
+- Summary
+    - Baseline features distinguishing PD patients: computer usage, sleep duration, longest period of depression, average weekly red wine intake
+    - Trend features distinguishing PD patients: computer usage, sitting height, average weekly fortified wine intake
 
 <br/>
 
