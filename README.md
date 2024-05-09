@@ -77,6 +77,7 @@ Aim2: @Jingnan Bai
 
 ## Appendix: Project file structure
 
+```
 ├─figure                                 // figure hosting for proposal & report file
 |
 ├─Group 8 Final Report
@@ -94,3 +95,4 @@ Aim2: @Jingnan Bai
         data_exploration.Rmd
         utils.R                        // funtion for aim2 @JingnanBai
         README.md
+```
