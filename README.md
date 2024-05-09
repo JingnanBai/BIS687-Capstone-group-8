@@ -44,7 +44,7 @@ Thus, we separated the PD patients into two cohorts based on their PD diagnosis 
 
 <br/>
 
-#### Task 1: Investigate key baseline characteristics prior to PD onset
+#### Task 1: Analyze baseline characteristics prior to PD onset
 
 > contributor: @YimingMiao
 
