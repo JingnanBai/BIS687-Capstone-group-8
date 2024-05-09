@@ -10,7 +10,21 @@ Kexin Wang, Yiming Miao, Jingnan Bai, Qiyu Huang
 
 <br/>
 
+## Contribution
 
+Aim1: (literature review, methodology, R codes, improvement & final report)
+- Task 1: @YimingMiao
+- Task 2: @kexinwang3
+
+Aim2: @Jingnan Bai (literature review, methodology, R codes, improvement & final report)
+
+final report (knit with RMD): @Jingnan Bai, @YimingMiao, @kexinwang3
+
+Literature Review, Information Collected, Introduction and Background, Report Struction and Report Editing : @QYHuang00
+
+<br/>
+
+<br/>
 
 ## Introduction
 
@@ -22,7 +36,12 @@ Data: UKbiobank
 
 Given the backgound above, our research team aims to enhance understanding and management of PD through several approaches: investigating key baseline characteristics before PD onset, analyzing longitudinal trends post-diagnosis, and developing practical, interpretable models to predict PD risk. 
 
+<br/>
+
+
 ### Aim1: Explore features distinguishing people with and without PD
+
+> contributor: @YimingMiao; @kexinwang3
 
 #### Challenges
 
@@ -97,19 +116,7 @@ Contribute to early detection of the disease, while constructing a cost-efficien
 
 <br/>
 
-## Contribution
 
-Aim1:
-- Task 1: @YimingMiao
-- Task 2: @kexinwang3
-
-Aim2: @Jingnan Bai
-
-Literature Review, Information Collected, Introduction and Background, Report Struction and Report Editing : @QYHuang00
-
-<br/>
-
-<br/>
 
 ## Appendix: Project file structure
 
