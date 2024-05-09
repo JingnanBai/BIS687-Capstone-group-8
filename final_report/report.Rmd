@@ -268,7 +268,7 @@ analyzed using forward stepwise selection to pinpoint critical variables
 related to PD onset.
 
 ![Workflow of Aim 1 - Task
-1](../assets/Figure%201%20-%20Workflow%20of%20Aim%201%20-%20Task%201.png)
+1](../figure/Figure%201%20-%20Workflow%20of%20Aim%201%20-%20Task%201.png)
 
 ### Logistic Regression
 
@@ -302,7 +302,7 @@ sleep fragmentation. Lastly, sensitivity or hurt feelings also emerged
 as significant factors for PD onset.
 
 ![Odds Ratio of PD for Statistically Significant
-Variables](../assets/Figure%202%20-%20Odds%20Ratio%20of%20PD%20for%20Statistically%20Significant%20Variables.png)
+Variables](../figure/Figure%202%20-%20Odds%20Ratio%20of%20PD%20for%20Statistically%20Significant%20Variables.png)
 
 In conclusion, our modeling results generally align with existing
 literature, suggesting that decreased physical activity, irregular or
@@ -356,7 +356,7 @@ instances, in addition to the 4 demographic features used in our
 matching process.
 
 ![Workflow of Aim 1 - Task
-2](../assets/Figure%203%20-%20Workflow%20of%20Aim%201%20-%20Task%202.png)
+2](../figure/Figure%203%20-%20Workflow%20of%20Aim%201%20-%20Task%202.png)
 
 
 ### Mixed-effects Model
@@ -388,7 +388,7 @@ visualized the longitudinal trends across 4 instances for some selected
 significant features.
 
 ![Visualization of Longitudinal
-Trends](../assets/Figure%204%20-%20Visualization%20of%20Longitudinal%20Trends.png)
+Trends](../figure/Figure%204%20-%20Visualization%20of%20Longitudinal%20Trends.png)
 
 ### Limitations
 
