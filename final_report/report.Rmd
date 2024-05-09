@@ -83,8 +83,8 @@ knowledge.
 
 A. Specific Aim 1
 
-Aim 1 of our study is to explore features distinguishing individuals
-with Parkinson's disease (PD) from those without. This initial aim is
+Aim 1 of our study is to investigate Key Inferences for Pre-Diagnostic and 
+Post-Diagnostic PD Patients. This initial aim is
 crucial as it sets the foundation for developing effective diagnostic
 tools and interventions. By identifying specific characteristics or
 markers that are significantly associated with Parkinson's disease, we
@@ -251,7 +251,7 @@ differences.
 
 <br/>
 
-## Task 1 - Investigate key baseline characteristics prior to PD onset
+## Task 1 - Analyze baseline characteristics prior to PD onset
 
 ### Participant and Feature Selection
 
