@@ -39,7 +39,7 @@ Given the backgound above, our research team aims to enhance understanding and m
 <br/>
 
 
-### Aim1: Explore features distinguishing people with and without PD
+### Aim1: Investigate Key Inferences for Pre-Diagnostic and Post-Diagnostic PD Patients
 
 > contributor: @YimingMiao; @kexinwang3
 
