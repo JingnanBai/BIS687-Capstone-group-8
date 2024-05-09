@@ -18,9 +18,11 @@ Aim1: (literature review, methodology, R codes, improvement & final report)
 
 Aim2: @Jingnan Bai (literature review, methodology, R codes, improvement & final report)
 
-final report (knit with RMD): @Jingnan Bai, @YimingMiao, @kexinwang3
+final report (knit with RMD): @JingnanBai, @YimingMiao, @kexinwang3
 
 Literature Review, Information Collected, Introduction and Background, Report Struction and Report Editing : @QYHuang00
+
+<br/>
 
 <br/>
 
@@ -35,6 +37,8 @@ Parkinson's disease (PD) stands as the second-most prevalent neurodegenerative d
 Data: UKbiobank
 
 Given the backgound above, our research team aims to enhance understanding and management of PD through several approaches: investigating key baseline characteristics before PD onset, analyzing longitudinal trends post-diagnosis, and developing practical, interpretable models to predict PD risk. 
+
+<br/>
 
 <br/>
 
@@ -54,7 +58,8 @@ Thus, we separated the PD patients into two cohorts based on their PD diagnosis 
 - Cohort 1: participants who were not diagnosed with PD at baseline but received a diagnosis in subsequent follow-ups
 - Cohort 2: patients who have already been diagnosed with PD at baseline and four instances were documented after the PD report
 
-  
+<br/>
+
 #### Task 1: Investigate key baseline characteristics prior to PD onset
 
 > contributor: @YimingMiao
@@ -67,6 +72,7 @@ Thus, we separated the PD patients into two cohorts based on their PD diagnosis 
 - Summary
     - Decreased physical activity, irregular or unhealthy dietary habits, sleep disorder, and mental health challenges could serve as potential PD risk factors or early indicators
 
+<br/>
 
 #### Task 2: Analyze longitudinal trends following PD diagnosis   
 
@@ -83,6 +89,7 @@ Thus, we separated the PD patients into two cohorts based on their PD diagnosis 
 
 <br/>
 
+<br/>
 
 ### Aim2: Build practical and interpretable models for predicting the risk of Parkinson’s disease
 
@@ -94,6 +101,8 @@ Parkinson's disease is widely believed to be associated with a combination of va
 
 #### Rationale
 Contribute to early detection of the disease, while constructing a cost-efficient methodology for application.
+
+<br/>
 
 #### Experimental Approach
 
@@ -116,7 +125,7 @@ Contribute to early detection of the disease, while constructing a cost-efficien
 
 <br/>
 
-
+<br/>
 
 ## Appendix: Project file structure
 
