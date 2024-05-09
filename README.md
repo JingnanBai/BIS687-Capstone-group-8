@@ -24,28 +24,38 @@ Given the backgound above, our research team aims to enhance understanding and m
 
 ### Aim1: Explore features distinguishing people with and without PD
 
-#### Challenge
-- Overlaps and gaps between the 4 instances of feature collection point and PD occurrence reporting
+#### Challenges
 
+- Primary response variable is the date of parkinson disease diagnosis
+- 4 instances of variable collection: 2006-2010, 2012, 2014, and 2019
+- Temporal framework facilitates longitudinal analysis but complicates aligning PD report dates with the data collection phases.
+
+Thus, we separated the PD patients into two cohorts based on their PD diagnosis status at baseline for separate analyses:
+
+- Cohort 1: participants who were not diagnosed with PD at baseline but received a diagnosis in subsequent follow-ups
+- Cohort 2: patients who have already been diagnosed with PD at baseline and four instances were documented after the PD report
+
+  
 #### Task 1: Investigate key baseline characteristics prior to PD onset
 
 > contributor: @YimingMiao
 
 - Experimental Approach
-    - propensity score matching
-    - forward stepwise selection
-    - logistic regression
+    - Propensity score matching
+    - MICE Imputation
+    - Forward stepwise selection
+    - Logistic regression
 - Summary
-    - odds of PD higher among participants who were observed with lower average acceleration
-    - people with the following life habits less likely to encounter PD: insomnia, more dried fruit intake, less water intake, no major dietary changes in the last 5 years
+    - Decreased physical activity, irregular or unhealthy dietary habits, sleep disorder, and mental health challenges could serve as potential PD risk factors or early indicators
+
 
 #### Task 2: Analyze longitudinal trends following PD diagnosis   
 
 > contributor: @kexinwang3
 
 - Experimental Approach
-    - propensity score matching
-    - mixed-effects model & longitudinal trend after PD diagnosis
+    - Propensity score matching
+    - Mixed-effects model & longitudinal trend after PD diagnosis
 - Summary
     - Baseline features distinguishing PD patients: computer usage, sleep duration, longest period of depression, average weekly red wine intake
     - Trend features distinguishing PD patients: computer usage, sitting height, average weekly fortified wine intake
