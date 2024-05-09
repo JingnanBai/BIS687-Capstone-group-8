@@ -30,13 +30,11 @@ contributor: @kexinwang3
 
 <br/>
 
+
 ### Aim2: Build practical and interpretable models for predicting the risk of Parkinson’s disease
 
-<br/>
+> contributor: @JingnanBai
 
-contributor: @JingnanBai
-
-<br/>
 
 #### Hypothesis
 Parkinson's disease is widely believed to be associated with a combination of various risk factors, including basic demographic information, environmental risk factors, lifestyle, and family history of related syndromes.
