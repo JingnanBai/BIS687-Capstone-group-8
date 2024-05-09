@@ -86,6 +86,8 @@ Aim1:
 
 Aim2: @Jingnan Bai
 
+Literature Review, Information Collected, Introduction and Background, Report Struction and Report Editing : @QYHuang00
+
 <br/>
 
 <br/>
