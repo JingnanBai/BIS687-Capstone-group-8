@@ -102,8 +102,6 @@ Literature Review, Information Collected, Introduction and Background, Report St
 ```
 ├─figure                                 // figure hosting for proposal & report file
 |
-├─ Literature Review, Preparation for project // @QYHuang00
-|
 ├─Group 8 Final Report
 │      BIS 687 Group 8 Report.pdf       // final report
 │      
